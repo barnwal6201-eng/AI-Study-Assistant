@@ -32,7 +32,7 @@ if "flashcard_reveal" not in st.session_state:
     st.session_state.flashcard_reveal = False
 
 # Initialize Gemini Client
-client = genai.Client(api_key="")
+client = genai.Client(api_key=st.secrets["GEMINI_API_KEY"])
 
 def ask_ai(prompt, is_json=False):
     config = {}
